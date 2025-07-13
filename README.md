@@ -26,7 +26,7 @@ Useful for apartments, hotels, or ISPs that require web-based login every day.
 ```sh
 chmod +x /etc/wifi_login.sh
 ```
-2. Enable it in your time zone (20:02 in UTC = 03:02 in UTC+7)
+2. Enable cron (use your timezone, e.g for me 20:02 in UTC = 03:02 in UTC+7)
 ```sh
 crontab -e
 
@@ -37,7 +37,7 @@ crontab -e
 /etc/init.d/cron enable
 ```
 
-## How It Works
+## 🧠 How It Works
 - Sends login credentials to http://10.0.0.1/portal/user-authen.php
 
 - Verifies external internet access by:
@@ -48,7 +48,7 @@ crontab -e
 
 - Repeats login if check fails
 
-## Example log output:
+## 📄 Example log output:
 ```sh
 Sun Jul 13 09:58:41 UTC 2025 Attempting login
 Sun Jul 13 09:58:42 UTC 2025 Attemping check external internet
